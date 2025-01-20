@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, nofavicon">
+    <title>Guess the Number Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <!-- Firebase Realtime Database -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+</head>
+<body>
+    <div class="popup guess-phase active" id="guessPhase">
+        <h1>Guess the Number</h1>
+        <p>Enter a number between 00 and 99:</p>
+        <input type="number" id="guessInput" min="0" max="99" placeholder="00">
+        <div id="timer"></div>
+        <button id="submitButton">Submit</button>
+    </div>
+    
+    <div class="popup processing-phase" id="processingPhase">
+        <h1>Processing...</h1>
+        <div class="loading">
+            <p>Analyzing your mind...</p>
+        </div>
+    </div>
+    
+    <div class="popup result-phase" id="resultPhase">
+        <h1>Result</h1>
+        <div id="result"></div>
+        <div id="leaderboard" class="leaderboard"></div>
+        <button id="tryAgainButton">Try Again</button>
+        <button id="shareButton">Share Your Guess</button>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
